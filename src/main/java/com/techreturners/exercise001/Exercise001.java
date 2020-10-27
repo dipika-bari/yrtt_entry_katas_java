@@ -12,6 +12,7 @@ public class Exercise001 {
 
     public int singles(int [] arr){
         // Add your code here!
+        System.out.println("The input array is : " + arr);
         return 0;
     }
 }
