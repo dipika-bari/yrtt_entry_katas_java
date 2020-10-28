@@ -21,7 +21,6 @@ public class Exercise004 {
             }
 
         }
-        System.out.println(newSentence);
         return newSentence.toString().trim();
     }
 }
