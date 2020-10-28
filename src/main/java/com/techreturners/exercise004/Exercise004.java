@@ -7,6 +7,21 @@ public class Exercise004 {
 
     public String pigLatin(String str) {
         // Add your code here
-        return "";
+        String[] input = str.split(" ");
+        StringBuilder newSentence = new StringBuilder();
+
+        for (String s:input) {
+            String editString = s.substring(1);
+
+            if (s.contains("!")) {
+                editString = s.substring(1,s.length()-1);
+                newSentence.append(editString).append(s.charAt(0)).append("ay").append(s.charAt(s.length()-1)).append(" ");
+            }else {
+                newSentence.append(editString).append(s.charAt(0)).append("ay").append(" ");
+            }
+
+        }
+        System.out.println(newSentence);
+        return newSentence.toString().trim();
     }
 }
