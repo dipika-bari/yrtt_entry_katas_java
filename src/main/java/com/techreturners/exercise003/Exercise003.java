@@ -33,11 +33,9 @@ public class Exercise003 {
     public static int[] rowWeights(final int[] weights) {
         // Your code here!
         int[] sum = sortIntoTeams(weights);
-        System.out.println("Weights of each team: " + Arrays.toString(sum));
         return sum;
     }
         private static int[] sortIntoTeams(int[] weights) {
-            System.out.println("Given data: "+ Arrays.toString(weights));
             List<Integer> team1 = new ArrayList<>();
             List<Integer> team2 = new ArrayList<>();
 
@@ -48,9 +46,6 @@ public class Exercise003 {
                     team2.add(weights[i]);
                 }
             }
-            System.out.println("Team 1: "+ team1);
-            System.out.println("Team 2: "+ team2);
-
             return calculateSumOfWeights(team1, team2);
         }
 
