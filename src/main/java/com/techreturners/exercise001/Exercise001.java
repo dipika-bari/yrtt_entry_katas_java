@@ -17,7 +17,6 @@ public class Exercise001 {
 
     public int singles(int [] arr) {
         // Add your code here!
-        System.out.println("Given array of numbers: "+Arrays.toString(arr));
 
             List<Integer> numbers = new ArrayList<Integer>(arr.length);
             for (int i : arr)
@@ -33,7 +32,6 @@ public class Exercise001 {
                     singleDigits.add(num);
                 }
             }
-            System.out.println("Digits occurring once: "+singleDigits);
             return sumOfNumbers(singleDigits);
     }
         private static int sumOfNumbers (List < Integer > singleDigits) {
@@ -41,7 +39,6 @@ public class Exercise001 {
             for (int digit : singleDigits) {
                 sum = sum + digit;
             }
-            System.out.println("Total: "+sum);
             return sum;
         }
 
