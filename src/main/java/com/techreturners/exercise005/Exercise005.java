@@ -1,5 +1,8 @@
 package com.techreturners.exercise005;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class Exercise005 {
 
     // Introduction
@@ -27,6 +30,26 @@ public class Exercise005 {
 
     public String[] mexicanWave(String str) {
         // Your code here!
-        return new String[] {};
-    }
+            int arraySize = str.length();
+            String[] wave = new String[arraySize];
+            for (int i = 0; i < arraySize; i++) {
+                char upperCaseLetter;
+                char currentCharacter = str.charAt(i);
+                upperCaseLetter = Character.toUpperCase(currentCharacter);
+                StringBuilder inputString = new StringBuilder(str);
+                inputString.setCharAt(i, upperCaseLetter);
+
+                if(Character.isSpaceChar(currentCharacter)){
+                    wave[i] = " ";
+                }else {
+                    wave[i] = inputString.toString();
+                }
+            }
+            Object[] validValues = Arrays.stream(wave).filter(value -> value != null && value.trim().length() > 0).toArray();
+            System.out.println(Arrays.toString(validValues));
+            String[] mexicanWave = new String[validValues.length];
+            System.arraycopy(validValues,0,mexicanWave,0,validValues.length);
+            return mexicanWave;
+        }
+
 }
