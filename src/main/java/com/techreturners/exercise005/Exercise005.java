@@ -46,7 +46,6 @@ public class Exercise005 {
                 }
             }
             Object[] validValues = Arrays.stream(wave).filter(value -> value != null && value.trim().length() > 0).toArray();
-            System.out.println(Arrays.toString(validValues));
             String[] mexicanWave = new String[validValues.length];
             System.arraycopy(validValues,0,mexicanWave,0,validValues.length);
             return mexicanWave;
